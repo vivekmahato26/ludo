@@ -1,0 +1,24 @@
+.board-container {
+    display: grid;
+    grid-template-columns: repeat(15,1fr);
+    width: 600px;
+    height: 600px;
+    background-color: #ecf0f1;
+    gap: 0;
+    .box {
+        border: 1px solid white;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div {
+            position: relative;
+            top: 0;
+            left: 0;
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
