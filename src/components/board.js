@@ -10,6 +10,62 @@ export default function Board() {
     <div>
       <p>Co-ordinates Format :- j,i</p>
       <div className="board-container">
+        <div className="blueCoins">
+          <div>
+            <img src={require("../assets/blue.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/blue.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/blue.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/blue.png")}/>
+          </div>
+        </div>
+        <div className="redCoins">
+           <div>
+            <img src={require("../assets/red.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/red.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/red.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/red.png")}/>
+          </div>
+        </div>
+        <div className="yellowCoins">
+           <div>
+            <img src={require("../assets/yellow.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/yellow.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/yellow.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/yellow.png")}/>
+          </div>
+        </div>
+        <div className="greenCoins">
+           <div>
+            <img src={require("../assets/green.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/green.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/green.png")}/>
+          </div>
+          <div>
+            <img src={require("../assets/green.png")}/>
+          </div>
+        </div>
         {boardArr.map((e) => {
           return (
             <div

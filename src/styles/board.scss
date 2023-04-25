@@ -5,6 +5,40 @@
     height: 600px;
     background-color: #ecf0f1;
     gap: 0;
+    position: relative;
+    .redCoins {
+        right: 0;
+    }
+    .greenCoins {
+        right: 0;
+        bottom: 0;
+    }
+    .yellowCoins {
+        bottom: 0;
+    }
+    .blueCoins, .redCoins,.yellowCoins,.greenCoins{
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+        width: 240px;
+        height: 240px;
+        div {
+            width: 2.5rem;
+            height: 2.5rem;
+            position: relative;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                // position: absolute;
+                width: 1.5rem;
+                // transform: translate(-50%,-50%);
+            }
+        }
+    }
     .box {
         border: 1px solid white;
         font-size: 0.8rem;
