@@ -29,9 +29,11 @@ for (let i = 1; i < 16; i++) {
     let type = "normal";
     let border = true;
     let style = {};
+    let movable =true;
     if (i <= 6 && j <= 6) {
       type = "blue";
       border = false;
+      movable = false;
       style = {
         backgroundColor: colors.blue,
         border: "none",
@@ -40,6 +42,7 @@ for (let i = 1; i < 16; i++) {
     if (i >= 10 && j <= 6) {
       type = "yellow";
       border = false;
+      movable = false;
       style = {
         backgroundColor: colors.yellow,
         border: "none",
@@ -48,6 +51,7 @@ for (let i = 1; i < 16; i++) {
     if (i <= 6 && j >= 10) {
       type = "red";
       border = false;
+      movable = false;
       style = {
         backgroundColor: colors.red,
         border: "none",
@@ -56,6 +60,7 @@ for (let i = 1; i < 16; i++) {
     if (i >= 10 && j >= 10) {
       type = "green";
       border = false;
+      movable = false;
       style = {
         backgroundColor: colors.green,
         border: "none",
@@ -64,6 +69,7 @@ for (let i = 1; i < 16; i++) {
     if (i >= 7 && j >= 7 && i <= 9 && j <= 9) {
       type = "home";
       border = false;
+      movable = false;
       style = {
         backgroundColor: colors.home,
         border: "none",
@@ -222,6 +228,7 @@ for (let i = 1; i < 16; i++) {
       border,
       safe,
       style,
+      movable
     });
 
     if (j == 7 && i <= 6) {

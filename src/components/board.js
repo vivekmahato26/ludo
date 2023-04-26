@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import { AiFillStar } from "react-icons/ai";
 
 import "../styles/board.scss";
 import boardData from "../utils/board";
 
 export default function Board() {
-    const {boardArr} = boardData
+    const {boardArr} = boardData;
+    const boardRef = useRef({
+      Moves: [
+        // { elementRef, type, currentCords,safe
+
+        // }
+      ],
+    })
   return (
     <div>
       <p>Co-ordinates Format :- j,i</p>
@@ -72,6 +79,17 @@ export default function Board() {
               className="box"
               style={e.style}
               key={e.cords.x + "," + e.cords.y}
+              ref={el => {
+                  if(e.movable) {
+                    const data = {
+                      element: el,
+                      cords: e.cords,
+                      type: e.type,
+                      safe: e.safe
+                    }
+                    boardRef.current.Moves.push(data);
+                  }
+              }}
             >
               <div>
                 {e.safe && (
