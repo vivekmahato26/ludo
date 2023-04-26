@@ -29,7 +29,7 @@ for (let i = 1; i < 16; i++) {
     let type = "normal";
     let border = true;
     let style = {};
-    let movable =true;
+    let movable = true;
     if (i <= 6 && j <= 6) {
       type = "blue";
       border = false;
@@ -228,7 +228,7 @@ for (let i = 1; i < 16; i++) {
       border,
       safe,
       style,
-      movable
+      movable,
     });
 
     if (j == 7 && i <= 6) {
@@ -357,5 +357,10 @@ rt.push(tempArr2[2]);
 br.push(tempArr2[3]);
 lb.push(tempArr2[1]);
 const finalMoves = [...bl, ...lb, ...lt, ...tl, ...tr, ...rt, ...rb, ...br];
+
+redHM.sort((a, b) => a.cords.x - b.cords.x);
+blueHM.sort((a, b) => a.cords.y - b.cords.y);
+greenHM.sort((a, b) => b.cords.y - a.cords.y);
+yellowHM.sort((a, b) => b.cords.x - a.cords.x);
 
 export default { boardArr, finalMoves, redHM, greenHM, yellowHM, blueHM };

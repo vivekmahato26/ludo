@@ -1,22 +1,25 @@
 import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../styles/dice.scss";
+import { rollDiceEvent } from "../redux/slice/dice";
 export default function Dice() {
   const diceRef = useRef(null);
   const dispatch = useDispatch();
+  const diceState = useSelector(state => state.Dice);
   // const player = useSelector(state => state.Player);
   const player = {
     currentName: "yellow"
   }
   // TODO: Add Player Slice
   const rollDice = () => {
+    if(diceState.playing) return;
     const res = getRandomNumber(1, 6)
     diceRef.current.dataset.roll = res;
-    dispatch({
+    dispatch(rollDiceEvent({
       roll: res,
       playing: true,
       player : player.currentName
-    })
+    }))
   };
   function getRandomNumber(min, max) {
     min = Math.ceil(min);
