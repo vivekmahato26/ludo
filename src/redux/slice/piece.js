@@ -6,7 +6,6 @@ const initalState = {
   currentPos: null,
   open: false,
   ref: null,
-  selected: false,
 };
 
 const pieceSlice = createSlice({
@@ -58,9 +57,9 @@ const pieceSlice = createSlice({
    
       state[turn] = state[turn].map((e) => {
         if (e.ref === ref) {
-          let newPos = e.currentPos + move; 
+          let newPos = e.currentPos + move;
           if (e.currentPos + move > 51) {
-            newPos -= 51 + 1; 
+            newPos -= 51 + 1;
           }
           return {
             ...e,
@@ -81,5 +80,5 @@ const pieceSlice = createSlice({
   },
 });
 
-export const { updatePeiceState, movePiece,selectPiece } = pieceSlice.actions;
+export const { updatePeiceState, movePiece, selectPiece } = pieceSlice.actions;
 export default pieceSlice;
