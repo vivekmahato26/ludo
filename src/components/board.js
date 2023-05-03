@@ -70,7 +70,7 @@ export default function Board() {
   }, [pieceState]);
   const handleSelect = (e) => {
     let ref = e.target.dataset.ref;
-    dispatch(selectPiece({ref,selected:true, turn:"yellow"}))
+    dispatch(selectPiece({ref, turn:"yellow"}))
   }
   return (
     <div>
